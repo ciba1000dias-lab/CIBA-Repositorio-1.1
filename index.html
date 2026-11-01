@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1E6FB8">
+<meta name="description" content="CIBA — Ecosistema Digital de Acompañamiento Parental en los Primeros 1000 Días de Vida. Educación pediátrica para madres, padres y cuidadores.">
+<title>CIBA · Acompañamiento Parental 1000 Días</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/icon-192.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon-192.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="app-header" role="banner">
+  <div class="header-top">
+    <a href="#inicio" class="brand" aria-label="CIBA inicio">
+      <svg class="brand-logo" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="22" fill="#1E6FB8"/>
+        <path d="M16 26c0-6 4-9 8-9s8 3 8 9-4 9-8 9-8-3-8-9z" fill="#FFFFFF"/>
+        <circle cx="19" cy="22" r="2" fill="#1E6FB8"/>
+        <circle cx="29" cy="22" r="2" fill="#1E6FB8"/>
+        <path d="M20 30c2 2 6 2 8 0" stroke="#1E6FB8" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">CIBA</span>
+    </a>
+    <div class="header-actions">
+      <button class="icon-btn" id="btnDataSaver" title="Modo ahorro de datos" aria-label="Modo ahorro de datos">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="icon-btn" id="btnFav" title="Favoritos" aria-label="Ver favoritos">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 21s-7-4.5-9-9.5C1.5 7 4 4 7 4c2 0 3.5 1 5 3 1.5-2 3-3 5-3 3 0 5.5 3 4 7.5-2 5-9 9.5-9 9.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="icon-btn" id="btnMenu" aria-label="Abrir menú" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Buscador global -->
+  <div class="search-wrap" role="search">
+    <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    <input id="globalSearch" type="search" placeholder="Buscar temas, recursos, edades…" autocomplete="off" aria-label="Buscar en CIBA">
+    <button id="btnClearSearch" class="clear-search" aria-label="Limpiar búsqueda" hidden>✕</button>
+  </div>
+
+  <!-- Menú hamburguesa -->
+  <nav id="mainNav" class="main-nav" aria-label="Menú principal">
+    <a href="#inicio" data-nav="inicio">🏠 Inicio</a>
+    <a href="#crianza" data-nav="crianza">👶 Crianza</a>
+    <a href="#informatica" data-nav="informatica">💻 Informática</a>
+    <a href="#bienestar" data-nav="bienestar">💚 Bienestar</a>
+    <a href="#acompanamiento" data-nav="acompanamiento">🤝 Acompañamiento</a>
+    <a href="#biblioteca" data-nav="biblioteca">📚 Biblioteca CIBA</a>
+    <a href="#prescripcion" data-nav="prescripcion">📱 Prescripción Digital</a>
+    <a href="#sobre" data-nav="sobre">ℹ️ Sobre CIBA</a>
+    <a href="#contacto" data-nav="contacto">📞 Contacto</a>
+  </nav>
+</header>
+
+<!-- ===== BANNER AVISO ===== -->
+<div class="aviso" role="note">
+  <strong>CIBA es educativo.</strong> No sustituye la consulta médica. Ante cualquier duda sobre la salud de tu bebé, consulta a tu pediatra.
+</div>
+
+<!-- ===== CONTENIDO PRINCIPAL ===== -->
+<main id="main" role="main">
+
+  <!-- INICIO -->
+  <section id="inicio" class="view active" aria-labelledby="h-inicio">
+    <div class="hero">
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 320 200" width="100%">
+          <defs>
+            <linearGradient id="gHero" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#E8F4FF"/>
+              <stop offset="1" stop-color="#FFF6E9"/>
+            </linearGradient>
+          </defs>
+          <rect width="320" height="200" rx="18" fill="url(#gHero)"/>
+          <circle cx="90" cy="110" r="42" fill="#FFD9C2"/>
+          <circle cx="90" cy="110" r="34" fill="#FFB894"/>
+          <circle cx="78" cy="104" r="3.5" fill="#5A3A2A"/>
+          <circle cx="102" cy="104" r="3.5" fill="#5A3A2A"/>
+          <path d="M80 118c4 4 16 4 20 0" stroke="#5A3A2A" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          <circle cx="150" cy="70" r="12" fill="#A8D8B9"/>
+          <circle cx="200" cy="60" r="8" fill="#FFC8B0"/>
+          <circle cx="240" cy="90" r="16" fill="#BFE0F5"/>
+          <path d="M170 150c0-14 10-22 22-22s22 8 22 22-10 22-22 22-22-8-22-22z" fill="#1E6FB8" opacity="0.85"/>
+          <path d="M185 148c0-4 3-6 7-6s7 2 7 6" stroke="#FFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <circle cx="188" cy="150" r="1.6" fill="#FFF"/>
+          <circle cx="196" cy="150" r="1.6" fill="#FFF"/>
+        </svg>
+      </div>
+      <h1 id="h-inicio">Acompañamos los primeros <span>1 000 días</span></h1>
+      <p class="hero-sub">Contenido pediátrico confiable, cálido y accesible para madres, padres y cuidadores. Gratis, sin registro y sin datos personales.</p>
+      <div class="hero-cta">
+        <a href="#crianza" class="btn btn-primary">Explorar temas</a>
+        <a href="#biblioteca" class="btn btn-ghost">Ver biblioteca</a>
+      </div>
+    </div>
+
+    <section class="stage-bar" aria-label="Filtrar por etapa">
+      <h2 class="section-title">Etapas del desarrollo</h2>
+      <div id="stageFilters" class="chips"></div>
+    </section>
+
+    <section class="quick-grid" aria-label="Accesos rápidos">
+      <h2 class="section-title">Accesos rápidos</h2>
+      <div class="grid-3">
+        <a href="#crianza" class="quick-card c-crianza"><span class="qc-icon">👶</span><span>Crianza</span></a>
+        <a href="#informatica" class="quick-card c-info"><span class="qc-icon">💻</span><span>Informática</span></a>
+        <a href="#bienestar" class="quick-card c-bien"><span class="qc-icon">💚</span><span>Bienestar</span></a>
+        <a href="#acompanamiento" class="quick-card c-acomp"><span class="qc-icon">🤝</span><span>Acompañamiento</span></a>
+        <a href="#biblioteca" class="quick-card c-biblio"><span class="qc-icon">📚</span><span>Biblioteca</span></a>
+        <a href="#prescripcion" class="quick-card c-presc"><span class="qc-icon">📱</span><span>Prescripción</span></a>
+      </div>
+    </section>
+
+    <section aria-label="Historial reciente">
+      <h2 class="section-title">Historial reciente</h2>
+      <div id="recentList" class="recent-list"><p class="empty">Aún no has visitado contenidos.</p></div>
+    </section>
+
+    <section aria-label="Favoritos">
+      <h2 class="section-title">Tus favoritos</h2>
+      <div id="favListHome" class="recent-list"><p class="empty">Marca contenidos con el corazón para verlos aquí.</p></div>
+    </section>
+  </section>
+
+  <!-- SECCIONES DINÁMICAS (Crianza, Informática, Bienestar, Acompañamiento) -->
+  <section id="crianza" class="view" aria-labelledby="h-crianza"></section>
+  <section id="informatica" class="view" aria-labelledby="h-informatica"></section>
+  <section id="bienestar" class="view" aria-labelledby="h-bienestar"></section>
+  <section id="acompanamiento" class="view" aria-labelledby="h-acompanamiento"></section>
+
+  <!-- BIBLIOTECA -->
+  <section id="biblioteca" class="view" aria-labelledby="h-biblioteca">
+    <h1 id="h-biblioteca" class="view-title">📚 Biblioteca CIBA</h1>
+    <p class="view-sub">Artículos, infografías, vídeos, pódcast, audios y formularios educativos.</p>
+    <div id="biblioFilters" class="chips"></div>
+    <div id="biblioList" class="card-grid"></div>
+  </section>
+
+  <!-- PRESCRIPCIÓN DIGITAL -->
+  <section id="prescripcion" class="view" aria-labelledby="h-presc">
+    <h1 id="h-presc" class="view-title">📱 Prescripción Digital</h1>
+    <p class="view-sub">Catálogo de aplicaciones, webs y recursos digitales confiables recomendados para las familias.</p>
+    <div id="prescList" class="card-grid"></div>
+  </section>
+
+  <!-- SOBRE CIBA -->
+  <section id="sobre" class="view" aria-labelledby="h-sobre">
+    <h1 id="h-sobre" class="view-title">ℹ️ Sobre CIBA</h1>
+    <div class="prose">
+      <p><strong>CIBA</strong> — Ecosistema Digital de Acompañamiento Parental en los Primeros 1 000 Días de Vida.</p>
+      <p>Plataforma educativa de pediatría dirigida a madres, padres y cuidadores. Su propósito es ofrecer información confiable, cálida y accesible durante el embarazo y los primeros dos años de vida.</p>
+      <h2>Autoría</h2>
+      <p>Proyecto independiente de divulgación pediátrica y salud digital. Contenidos revisados bajo criterios de medicina basada en evidencia y adaptados al contexto hispanohablante.</p>
+      <h2>Aviso educativo</h2>
+      <p>CIBA es una plataforma <strong>educativa</strong>. No sustituye la consulta médica, el diagnóstico ni el tratamiento. Ante cualquier duda sobre la salud de tu bebé o la tuya, consulta a un profesional de la salud.</p>
+      <h2>Privacidad</h2>
+      <p>CIBA no solicita datos personales, no almacena historias clínicas y no utiliza servicios de terceros para rastreo. Los favoritos e historial se guardan únicamente en tu dispositivo (LocalStorage).</p>
+      <h2>Licencia</h2>
+      <p>Contenidos originales bajo licencia <strong>CC BY-NC-SA 4.0</strong>. Se respetan los derechos de terceros en recursos citados o enlazados.</p>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="view" aria-labelledby="h-contacto">
+    <h1 id="h-contacto" class="view-title">📞 Contacto</h1>
+    <div class="prose">
+      <p>¿Tienes dudas, sugerencias o deseas colaborar con CIBA?</p>
+      <a class="btn btn-whatsapp" href="https://wa.me/000000000000?text=Hola%20CIBA%2C%20tengo%20una%20consulta" target="_blank" rel="noopener">
+        Escribir por WhatsApp
+      </a>
+      <p class="hint">Reemplaza el número en el enlace de WhatsApp del archivo <code>index.html</code> por el número institucional real antes de publicar.</p>
+      <h2>Aviso</h2>
+      <p>El canal de WhatsApp es de carácter <strong>informativo</strong>. No se atienden urgencias ni se ofrecen diagnósticos. En caso de emergencia, acude al servicio de salud más cercano.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== MODAL DETALLE ===== -->
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+  <div class="modal-card">
+    <button class="modal-close" id="modalClose" aria-label="Cerrar">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<!-- ===== TOAST ===== -->
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="app-footer">
+  <p><strong>CIBA</strong> · Acompañamiento Parental 1000 Días</p>
+  <p class="footer-small">Educativo · No sustituye la consulta médica</p>
+  <p class="footer-small">Licencia CC BY-NC-SA 4.0</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
